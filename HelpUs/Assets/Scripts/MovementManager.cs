@@ -2,13 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class MovementManager : MonoBehaviour
 {
     private PlayerControls playerControls;
-
-    [SerializeField] private Transform playerMain;
-    [SerializeField] private Transform playerReflection;
     [SerializeField] private float movementSpeed;
+    public float getMovementSpeed {
+        get {return movementSpeed;}
+    }
+
+    private float xMove;
+    public float getXMove {
+        get {return xMove;}
+    }
+    private float invertGravity;
+    public float getInvertGravity {
+        get {return invertGravity;}
+    }
 
     private void Awake()
     {
@@ -31,10 +40,14 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        float xMove = playerControls.Movement.LeftandRight.ReadValue<float>();
-        float invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
+        xMove = playerControls.Movement.LeftandRight.ReadValue<float>();
+        invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
         if(invertGravity == 1) {
             
         }
     }
+
+    
+
+    
 }
