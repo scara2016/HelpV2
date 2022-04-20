@@ -26,7 +26,7 @@ public class GravityReverse : MonoBehaviour
 
     public void ChangeDirection()
     {
-        convertDirection*=-1
+        convertDirection*=-1;
         Physics2D.gravity = new Vector2(0, convertDirection);
     }
 
