@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 15
+  controlID: 21
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16
+  controlID: 22
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 17
+  controlID: 23
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,22 +346,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\46423966\HelpV2\HelpUs
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c6970000
-    m_LastClickedID: 38854
-    m_ExpandedIDs: 00000000e88e0000c8c3000000ca9a3b
+    m_SelectedIDs: 60610000
+    m_LastClickedID: 24928
+    m_ExpandedIDs: 00000000326100005a61000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,7 +389,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 0000000032610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -519,7 +519,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6e01ffff5e43ffff6043ffffac45ffffc84dffff404effffc24effff364fffffac4fffff885cffff8a5cffff045dffff745dffffe668ffffe868ffff6269ffff586bffffae6bffff446cffff866cffff866dfffff66dffff6c6effffe06efffffc70ffff0c76ffff5276ffff0677ffff207bffff627bffffa87bfffff082ffff9a84ffff3688ffff968effff368fffffec90fffffa91ffff8e93ffffd494ffff3497fffffe97ffffa4a2ffffb4a3ffff18c7ffffb6bd00005abe0000
+      m_ExpandedIDs: 2207ffffc00dffff100effff6a23ffff9a24ffff4027ffff222dffffa42effffa62effff6a32ffff8032ffff6641ffff6e41ffffc642ffffba43ffff7c44ffffc246ffff2e4bffffa84effff3c52fffff856ffff825cffffd05cffff9062ffff7063ffff5664ffff4466ffff566effffa86fffffb06fffff268bffff668bffff688bffff528effffb893ffff1c9fffff1e9fffffbca2ffff44a3fffffcb5ffff18baffff68bbffffb6bcffffa0beffff7cf6ffff7ef6ffff28fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -790,9 +790,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.72133535, y: 3.0055435, z: -0.10070953}
+    m_Target: {x: 4.054259, y: 3.550956, z: -0.19834158}
     speed: 2
-    m_Value: {x: 0.38024446, y: 3.1918876, z: -0.09649653}
+    m_Value: {x: 4.054259, y: 3.550956, z: -0.19834158}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -843,9 +843,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.783527
+    m_Target: 19.54673
     speed: 2
-    m_Value: 9.362227
+    m_Value: 19.54673
   m_Ortho:
     m_Target: 1
     speed: 2
