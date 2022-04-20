@@ -9,6 +9,7 @@ public class GravityReverse : MonoBehaviour
     public float convertDirection=2f;
     private Rigidbody2D rb;
     private float invertGravity;
+    private float timer=0.2f;
     private void Awake() {
         movementManager = FindObjectOfType<MovementManager>();
     }
@@ -25,8 +26,13 @@ public class GravityReverse : MonoBehaviour
         invertGravity = movementManager.getInvertGravity;
         if(invertGravity==1)
         {
+            if(timer<=0)
+            {
             ChangeDirection();
+            timer=0.2f;
+            }
         }
+        timer-=Time.deltaTime;
     }
 
 
