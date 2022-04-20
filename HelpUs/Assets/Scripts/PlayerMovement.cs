@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         xMove = movementManager.getXMove;
+        invertGravity = movementManager.getInvertGravity;
 
         if(xMove == -1) {
             transform.Translate(movementSpeed * Vector2.left * Time.deltaTime);
@@ -31,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
         if(xMove == 1) {
             transform.Translate(movementSpeed * Vector2.right * Time.deltaTime);
+        }
+
+        if(invertGravity == 1) {
+            
         }
     }
 }
