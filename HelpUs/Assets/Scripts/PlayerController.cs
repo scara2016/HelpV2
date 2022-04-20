@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private PlayerControls playerControls;
 
-    private PlayerMovement playerMovement;
+    [SerializeField] private Transform playerMain;
+    [SerializeField] private Transform playerReflection;
+    [SerializeField] private float movementSpeed;
 
     private void Awake()
     {
-        playerMovement = new PlayerMovement();
+        playerControls = new PlayerControls();
     }
 
     private void OnEnable()
     {
-        playerMovement.Enable();
+        playerControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerMovement.Disable();
+        playerControls.Disable();
     }
 
     void Start()
@@ -28,13 +31,10 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        float xMove = playerMovement.Movement.LeftandRight.ReadValue<float>();
-
-        float invertGravity = playerMovement.Movement.InvertGravity.ReadValue<float>();
-        if(playerMovement.Movement.InvertGravity.ReadValue<float>() == 1)
-        if(playerMovement.Movement.InvertGravity.triggered)
-        {
-            Debug.Log("Invert");
+        float xMove = playerControls.Movement.LeftandRight.ReadValue<float>();
+        float invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
+        if(invertGravity == 1) {
+            
         }
     }
 }
