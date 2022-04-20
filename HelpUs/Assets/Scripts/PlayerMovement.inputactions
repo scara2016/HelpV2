@@ -1,0 +1,76 @@
+{
+    "name": "PlayerMovement",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "079fc3c8-2838-46a4-851a-ac95e234b32d",
+            "actions": [
+                {
+                    "name": "Invert Gravity",
+                    "type": "Button",
+                    "id": "a9c492a0-43f8-4922-8740-34ad99067960",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left and Right",
+                    "type": "Button",
+                    "id": "56fdb2ca-9248-4ab6-b483-e092c883289a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4c1031b9-d7cc-415b-8c5d-f588de0d491b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Invert Gravity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "ce9251f2-0bfc-4941-ba57-15b8942a9c87",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left and Right",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "0242ca30-3cd9-4111-8873-d634ebbe00fc",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left and Right",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "ed707dec-e9df-427b-a853-7b4a5843f7ca",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left and Right",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
