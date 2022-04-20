@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
         currentScene=1;
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -47,7 +46,6 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
 
     public void NextScene(string level)
     {

@@ -9,17 +9,17 @@ public class GravityReverse : MonoBehaviour
     public float convertDirection=2f;
     private Rigidbody2D rb;
     private float invertGravity;
+    
     private void Awake() {
         movementManager = FindObjectOfType<MovementManager>();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ChangeDirection();
     }
 
-    // Update is called once per frame
     void Update()
     {
         invertGravity = movementManager.getInvertGravity;

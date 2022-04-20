@@ -26,6 +26,11 @@ public class TrapDoorMovement : MonoBehaviour
         {
             this.transform.transform.position = Vector3.Lerp(StartPoint.position, EndPoint.position, t);
         }
+
+        if(!moveActivated)
+        {
+            this.transform.transform.position = Vector3.Lerp(EndPoint.position, StartPoint.position, t);
+        }
     }
 
 }

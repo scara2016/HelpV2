@@ -4,35 +4,25 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    private float xMove;
-    private float invertGravity;
-    private float movementSpeed;
+    private float xMove; //object movement input retrived from MovementManager
+    
+    private float movementSpeed; //object movement speed retrived from MovementManager
 
     private MovementManager movementManager;
 
-    private void Awake() {
+    private void Awake()
+    {
         movementManager = FindObjectOfType<MovementManager>();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         movementSpeed = movementManager.getMovementSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         xMove = movementManager.getXMove;
-        invertGravity = movementManager.getInvertGravity;
-
-        if(xMove == -1) {
-            transform.Translate(movementSpeed * Vector2.left * Time.deltaTime);
-        }
-
-        if(xMove == 1) {
-            transform.Translate(movementSpeed * Vector2.right * Time.deltaTime);
-        }
-
+        transform.Translate(new Vector2(movementSpeed * xMove * Time.deltaTime, 0)); //moves the object left or right depending on the input
     }
 }
