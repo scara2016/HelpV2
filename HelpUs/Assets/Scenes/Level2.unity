@@ -130,14 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8129900516300277857, guid: de7ad73d410529944af63c29f675a210, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8129900516300277857, guid: de7ad73d410529944af63c29f675a210, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.81
-      objectReference: {fileID: 0}
     - target: {fileID: 8129900516719884141, guid: de7ad73d410529944af63c29f675a210, type: 3}
       propertyPath: activatorButton
       value: 
@@ -293,7 +285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8374909630778263208, guid: fb67557acbbe83d43a97d55bd44f06d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: -3.63
       objectReference: {fileID: 0}
     - target: {fileID: 8374909630778263208, guid: fb67557acbbe83d43a97d55bd44f06d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -390,37 +382,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1632ed0e47f560e45b439fe8e34d3161, type: 3}
---- !u!1 &884096137 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8129900516719884049, guid: de7ad73d410529944af63c29f675a210, type: 3}
-  m_PrefabInstance: {fileID: 39144895}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &884096142
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884096137}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1001 &1165300971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -563,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4461108674532231668, guid: d9951a96ac4fcb445befa56665f03faf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 4461108674532231668, guid: d9951a96ac4fcb445befa56665f03faf, type: 3}
       propertyPath: m_LocalPosition.z
