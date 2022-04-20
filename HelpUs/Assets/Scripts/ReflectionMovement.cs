@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class ReflectionMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private float xMove;
+    private float invertGravity;
+    private float movementSpeed;
+
+    private MovementManager movementManager;
+
+    private void Awake() {
+        movementManager = FindObjectOfType<MovementManager>();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        movementSpeed = movementManager.getMovementSpeed;
+    }
+
     void Update()
     {
-        
+        xMove = movementManager.getXMove;
+        invertGravity = movementManager.getInvertGravity;
+
+        if(xMove == -1) {
+            transform.Translate(movementSpeed * Vector2.left * Time.deltaTime);
+        }
+
+        if(xMove == 1) {
+            transform.Translate(movementSpeed * Vector2.right * Time.deltaTime);
+        }
+
+        if(invertGravity == 1) {
+            
+        }
     }
 }
