@@ -30,7 +30,7 @@ public class Buttons : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Happened");
-        if (collision.gameObject.tag == "PlayerStandIn")
+        if (collision.gameObject.tag == "Player")
         {
             if (!colorActivated)
             {
