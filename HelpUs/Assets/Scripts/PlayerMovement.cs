@@ -14,13 +14,12 @@ public class PlayerMovement : MonoBehaviour
     private void Awake() {
         movementManager = FindObjectOfType<MovementManager>();
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         movementSpeed = movementManager.getMovementSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         xMove = movementManager.getXMove;

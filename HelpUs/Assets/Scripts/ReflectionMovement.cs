@@ -31,9 +31,5 @@ public class ReflectionMovement : MonoBehaviour
         if(xMove == 1) {
             transform.Translate(movementSpeed * Vector2.right * Time.deltaTime);
         }
-
-        if(invertGravity == 1) {
-            
-        }
     }
 }

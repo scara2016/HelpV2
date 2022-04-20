@@ -34,20 +34,9 @@ public class MovementManager : MonoBehaviour
         playerControls.Disable();
     }
 
-    void Start()
-    {
-
-    }
-
     private void Update() {
         xMove = playerControls.Movement.XMovement.ReadValue<float>();
         invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
-        if(invertGravity == 1) {
-            
-        }
     }
 
-    
-
-    
 }
