@@ -42,6 +42,7 @@ public class MovementManager : MonoBehaviour
     private void Update() {
         xMove = playerControls.Movement.LeftandRight.ReadValue<float>();
         invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
+        Debug.Log(invertGravity);
         if(invertGravity == 1) {
             
         }
