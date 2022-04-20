@@ -6,7 +6,7 @@ public class GravityReverse : MonoBehaviour
 {
 
     private MovementManager movementManager;
-    public float convertDirection=9.8f;
+    public float convertDirection=2f;
     private Rigidbody2D rb;
     private float invertGravity;
     private void Awake() {
@@ -24,7 +24,7 @@ public class GravityReverse : MonoBehaviour
         invertGravity = movementManager.getInvertGravity;
         if(invertGravity==1)
         {
-        Debug.Log("HI");
+        ChangeDirection();
         }
     }
 
