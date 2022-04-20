@@ -37,7 +37,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Left and Right"",
+                    ""name"": ""X Movement"",
                     ""type"": ""Button"",
                     ""id"": ""56fdb2ca-9248-4ab6-b483-e092c883289a"",
                     ""expectedControlType"": ""Button"",
@@ -59,13 +59,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
+                    ""name"": ""Arrows"",
                     ""id"": ""ce9251f2-0bfc-4941-ba57-15b8942a9c87"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Left and Right"",
+                    ""action"": ""X Movement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -76,7 +76,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Left and Right"",
+                    ""action"": ""X Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -87,7 +87,40 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Left and Right"",
+                    ""action"": ""X Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Wasd"",
+                    ""id"": ""903bf0b1-0eab-43f0-a31f-783863be93b7"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""X Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""4a5646b9-f446-4174-bdc8-6ffddba1b6b5"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""X Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""6fb29a57-62a9-47a1-a56c-9f303a9dd572"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""X Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -99,7 +132,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // Movement
         m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
         m_Movement_InvertGravity = m_Movement.FindAction("Invert Gravity", throwIfNotFound: true);
-        m_Movement_LeftandRight = m_Movement.FindAction("Left and Right", throwIfNotFound: true);
+        m_Movement_XMovement = m_Movement.FindAction("X Movement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,13 +193,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Movement;
     private IMovementActions m_MovementActionsCallbackInterface;
     private readonly InputAction m_Movement_InvertGravity;
-    private readonly InputAction m_Movement_LeftandRight;
+    private readonly InputAction m_Movement_XMovement;
     public struct MovementActions
     {
         private @PlayerControls m_Wrapper;
         public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @InvertGravity => m_Wrapper.m_Movement_InvertGravity;
-        public InputAction @LeftandRight => m_Wrapper.m_Movement_LeftandRight;
+        public InputAction @XMovement => m_Wrapper.m_Movement_XMovement;
         public InputActionMap Get() { return m_Wrapper.m_Movement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -179,9 +212,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @InvertGravity.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnInvertGravity;
                 @InvertGravity.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnInvertGravity;
                 @InvertGravity.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnInvertGravity;
-                @LeftandRight.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnLeftandRight;
-                @LeftandRight.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnLeftandRight;
-                @LeftandRight.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnLeftandRight;
+                @XMovement.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnXMovement;
+                @XMovement.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnXMovement;
+                @XMovement.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnXMovement;
             }
             m_Wrapper.m_MovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -189,9 +222,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @InvertGravity.started += instance.OnInvertGravity;
                 @InvertGravity.performed += instance.OnInvertGravity;
                 @InvertGravity.canceled += instance.OnInvertGravity;
-                @LeftandRight.started += instance.OnLeftandRight;
-                @LeftandRight.performed += instance.OnLeftandRight;
-                @LeftandRight.canceled += instance.OnLeftandRight;
+                @XMovement.started += instance.OnXMovement;
+                @XMovement.performed += instance.OnXMovement;
+                @XMovement.canceled += instance.OnXMovement;
             }
         }
     }
@@ -199,6 +232,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IMovementActions
     {
         void OnInvertGravity(InputAction.CallbackContext context);
-        void OnLeftandRight(InputAction.CallbackContext context);
+        void OnXMovement(InputAction.CallbackContext context);
     }
 }
