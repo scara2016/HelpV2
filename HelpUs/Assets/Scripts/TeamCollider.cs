@@ -28,7 +28,7 @@ public class TeamCollider : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collider)
     {
         GameObject other = collider.gameObject;
         Transform seeIfTeam=collider.transform;

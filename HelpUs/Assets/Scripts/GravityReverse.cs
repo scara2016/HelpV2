@@ -16,6 +16,7 @@ public class GravityReverse : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ChangeDirection();
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class GravityReverse : MonoBehaviour
         invertGravity = movementManager.getInvertGravity;
         if(invertGravity==1)
         {
-        ChangeDirection();
+            ChangeDirection();
         }
     }
 
