@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(invertGravity == 1) {
-            
+            Debug.Log("Invert");
         }
     }
 }
