@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     private PlayerControls playerControls;
+
+    [SerializeField] private Transform playerMain;
+    [SerializeField] private Transform playerReflection;
+    [SerializeField] private float movementSpeed;
 
     private void Awake()
     {
@@ -30,5 +33,8 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         float xMove = playerControls.Movement.LeftandRight.ReadValue<float>();
         float invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
+        if(invertGravity == 1) {
+            
+        }
     }
 }
