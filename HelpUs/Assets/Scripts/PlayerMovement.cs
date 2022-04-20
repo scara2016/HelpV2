@@ -34,8 +34,5 @@ public class PlayerMovement : MonoBehaviour
             transform.Translate(movementSpeed * Vector2.right * Time.deltaTime);
         }
 
-        if(invertGravity == 1) {
-            Debug.Log("Invert");
-        }
     }
 }

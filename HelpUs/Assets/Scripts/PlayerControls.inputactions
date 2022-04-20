@@ -29,7 +29,7 @@
                     "name": "",
                     "id": "4c1031b9-d7cc-415b-8c5d-f588de0d491b",
                     "path": "<Keyboard>/space",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
                     "action": "Invert Gravity",
