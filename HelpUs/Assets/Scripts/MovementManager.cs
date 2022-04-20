@@ -6,16 +6,19 @@ public class MovementManager : MonoBehaviour
 {
     private PlayerControls playerControls;
     [SerializeField] private float movementSpeed;
-    public float getMovementSpeed {
+    public float getMovementSpeed
+    {
         get {return movementSpeed;}
     }
 
     private float xMove;
-    public float getXMove {
+    public float getXMove
+    {
         get {return xMove;}
     }
     private float invertGravity;
-    public float getInvertGravity {
+    public float getInvertGravity
+    {
         get {return invertGravity;}
     }
 
@@ -34,7 +37,8 @@ public class MovementManager : MonoBehaviour
         playerControls.Disable();
     }
 
-    private void Update() {
+    private void Update()
+    {
         xMove = playerControls.Movement.XMovement.ReadValue<float>();
         invertGravity = playerControls.Movement.InvertGravity.ReadValue<float>();
     }

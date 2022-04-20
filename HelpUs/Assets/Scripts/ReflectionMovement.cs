@@ -5,12 +5,12 @@ using UnityEngine;
 public class ReflectionMovement : MonoBehaviour
 {
     private float xMove;
-    private float invertGravity;
     private float movementSpeed;
 
     private MovementManager movementManager;
 
-    private void Awake() {
+    private void Awake()
+    {
         movementManager = FindObjectOfType<MovementManager>();
     }
 
@@ -22,14 +22,8 @@ public class ReflectionMovement : MonoBehaviour
     void Update()
     {
         xMove = movementManager.getXMove;
-        invertGravity = movementManager.getInvertGravity;
 
-        if(xMove == -1) {
-            transform.Translate(movementSpeed * Vector2.left * Time.deltaTime);
-        }
-
-        if(xMove == 1) {
-            transform.Translate(movementSpeed * Vector2.right * Time.deltaTime);
-        }
+        //moves the object left or right depending on the input
+        transform.Translate(new Vector2(movementSpeed * xMove * Time.deltaTime, 0));
     }
 }
