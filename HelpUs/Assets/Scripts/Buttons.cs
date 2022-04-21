@@ -16,11 +16,6 @@ public class Buttons : MonoBehaviour
             return buttonOn;
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     private void Awake()
     {
@@ -57,11 +52,5 @@ public class Buttons : MonoBehaviour
         {
             spriteRenderer.color = Color.cyan;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

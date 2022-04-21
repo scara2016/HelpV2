@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
 
     private int currentScene;
 
-
     void Awake()
     {
         if (instance != null)
@@ -34,30 +33,29 @@ public class GameManager : MonoBehaviour
         currentScene=1;
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
         instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
+    //loads the next scene
     public void NextScene(string level)
     {
         SceneManager.LoadScene(level);
         UIManager.Instance.LevelDisplay(currentScene);
     }
 
+    //gets the number of the next scene
     public int GetNextScene()
     {
         currentScene++;
+        return currentScene;
+    }
+
+    //gets the current scene
+    public int GetCurrentScene()
+    {
         return currentScene;
     }
 }

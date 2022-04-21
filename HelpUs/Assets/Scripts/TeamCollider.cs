@@ -8,11 +8,9 @@ public class TeamCollider : MonoBehaviour
     private Transform target; 
     private int nextScene;
 
-     private string SceneFormat= "Level{0}";
+    private string SceneFormat= "Level{0}";
     private string SceneNumber;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         GameObject player = GameObject.Find("Player1");
@@ -20,12 +18,6 @@ public class TeamCollider : MonoBehaviour
         {
             target=player.transform;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void OnCollisionEnter2D(Collision2D collider)
