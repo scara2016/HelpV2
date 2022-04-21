@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void NextScene(string level)
     {
         SceneManager.LoadScene(level);
+        UIManager.Instance.LevelDisplay(currentScene);
     }
 
     public int GetNextScene()
