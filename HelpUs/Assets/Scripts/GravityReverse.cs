@@ -38,13 +38,9 @@ public class GravityReverse : MonoBehaviour
         timer-=Time.deltaTime;
     }
 
-
     public void ChangeDirection()
     {
         convertDirection*=-1;
         rb.gravityScale =convertDirection ;
-       
     }
-
-
 }
