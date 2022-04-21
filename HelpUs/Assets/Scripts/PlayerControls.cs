@@ -59,6 +59,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""06c3e2e0-97f0-423e-96a9-15f3ec8af6ea"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Invert Gravity"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
                     ""name"": ""Arrows"",
                     ""id"": ""ce9251f2-0bfc-4941-ba57-15b8942a9c87"",
                     ""path"": ""1DAxis"",
