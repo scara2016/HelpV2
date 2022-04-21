@@ -140,6 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129900516719884141, guid: de7ad73d410529944af63c29f675a210, type: 3}
       propertyPath: activatorButton
+      value: 
       objectReference: {fileID: 1519414169}
     - target: {fileID: 8129900516796491042, guid: de7ad73d410529944af63c29f675a210, type: 3}
       propertyPath: m_Name
