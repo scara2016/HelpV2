@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
 
     private MovementManager movementManager;
 
+    private float colCheck = 1;
+
     private void Awake()
     {
         movementManager = FindObjectOfType<MovementManager>();
@@ -23,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         xMove = movementManager.getXMove;
-        transform.Translate(new Vector2(movementSpeed * xMove * Time.deltaTime, 0)); //moves the object left or right depending on the input
+        if(xMove == 1)
+        {
+
+        }
+        transform.Translate(new Vector2(movementSpeed * xMove * Time.deltaTime * colCheck, 0)); //moves the object left or right depending on the input
+    }
+
+    private void OnCollisionStay2D(Collision2D col) {
+        
     }
 }
