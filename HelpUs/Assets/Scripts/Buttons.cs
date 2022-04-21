@@ -25,32 +25,16 @@ public class Buttons : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Happened");
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !colorActivated)
         {
-            if (!colorActivated)
-            {
-                colorActivated = true;
-                buttonOn = true;
-                colorChange();
-            }
-            else
-            {
-                colorActivated = false;
-                buttonOn = false;
-                colorChange();
-            }
+            colorActivated = true;
+            buttonOn = true;
+            colorChange();
         }
     }
 
     private void colorChange()
     {
-        if (colorActivated)
-        {
-            spriteRenderer.color = Color.blue;
-        }
-        else
-        {
-            spriteRenderer.color = Color.cyan;
-        }
+        spriteRenderer.color = Color.blue;
     }
 }
