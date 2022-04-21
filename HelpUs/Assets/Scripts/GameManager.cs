@@ -50,6 +50,10 @@ public class GameManager : MonoBehaviour
     public int GetNextScene()
     {
         currentScene++;
+        if(currentScene>6)
+        {
+            currentScene=1;
+        }
         return currentScene;
     }
 
