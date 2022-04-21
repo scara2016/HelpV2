@@ -8,7 +8,7 @@ public class TeamCollider : MonoBehaviour
     private Transform target; 
     private int nextScene;
 
-     private string SceneFormat= "Level{0}";
+    private string SceneFormat= "Level{0}";
     private string SceneNumber;
 
 

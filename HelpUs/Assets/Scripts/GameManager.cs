@@ -57,4 +57,9 @@ public class GameManager : MonoBehaviour
         currentScene++;
         return currentScene;
     }
+
+    public int GetCurrentScene()
+    {
+        return currentScene;
+    }
 }
